@@ -81,7 +81,6 @@ const displayWeaterInfo = (data) => {
     day.textContent = `${new Date().getDate() + 1 + i} ${data.weatherEmoji}`;
     forecastDiv.appendChild(day);
     console.log(getForecastData(city));
-
   }
 
   cityDisplay.textContent = city;
@@ -112,22 +111,22 @@ const getWeatherEmoji = (weatherId) => {
   } else if (weatherId >= 300 && weatherId <= 321) {
     // Group 3xx: Drizzle
 
-    return "🌧️";
+    return "🌦️";
   } else if (weatherId >= 500 && weatherId <= 531) {
     // Group 5xx: Rain
     return "🌧️";
   } else if (weatherId >= 600 && weatherId <= 622) {
     // Group 6xx: Snow
-    return "🌨️";
+    return "❄️";
   } else if (weatherId >= 701 && weatherId <= 781) {
     // Group 7xx: Atmosphere
-    return "🌫️";
+    return "☁️";
   } else if (weatherId === 800) {
     // Group 800: Clear
     return "☀️";
   } else if (weatherId >= 801 && weatherId <= 804) {
     // Group 8xx: Undefined
-    return "?";
+    return "🤫";
   }
 };
 
